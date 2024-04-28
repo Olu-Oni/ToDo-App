@@ -1,0 +1,76 @@
+.topBar{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+
+.topBar *{
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.topBar h2{
+    margin:20px 20px 0px 20px;
+    color: #8D9CB8;
+}
+
+.searchBar{
+    position:relative;
+    margin-top:20px;
+    color: #8D9CB8;
+    height: 40px; 
+    min-width: 200px;
+}
+.searchInput{
+    
+    border-radius: 15px;
+    background-color: #F5F7F9; 
+    border-style: none;
+    
+    height: 35px; 
+    width: 50px;
+    padding:0px 10px 0px 10px;
+
+}
+
+.searchInput:focus {
+    outline:none;
+    background-color: #F5F7F9;
+    width: 160px;
+}
+
+.taskGroup {
+    display: flex;
+    flex-direction: column;
+    
+}
+.tasks{
+    flex-basis: 1;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.emptyToDoIcon{
+    width: clamp(100px ,70% ,600px);
+    margin-top: 30px;
+
+}
+
+.emptyToDoIcon ~ p{
+    
+    margin: 10px 20px 0px 0px ;   
+    color: #8D9CB8;
+}
+
+.emptyToDoIcon + p{
+    font-size: larger;
+}
+
+.searchIcon{
+    scale: .07;
+    position: absolute;
+
+}

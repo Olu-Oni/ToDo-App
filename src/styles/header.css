@@ -1,0 +1,33 @@
+.header{ 
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    border-bottom: solid #7571a2;
+    flex-wrap: nowrap;
+}
+
+.ToDo{  
+    min-width: 160px;
+    
+}
+
+.ToDo h1{
+    position: relative;
+    color: #0060C1;
+    
+}
+.profile{
+    margin: 10px 10px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    align-items: flex-end;
+}
+.greeting{
+    display: flex;
+   align-items: end;
+}
+
+.greeting h2{
+    margin-right: 10px; 
+}

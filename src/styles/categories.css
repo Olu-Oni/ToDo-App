@@ -1,0 +1,67 @@
+.addButton{ 
+    border-radius: 15px;
+    background-color: #007FFF;
+    color:#ffff;
+    border-style: none;
+    margin:10px;
+    margin-left: 40px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.addButton span{
+    position: relative;
+    top:3px;
+    margin-right: 10px;
+    display:inline-block;
+    font-size: 24px;
+    border: 2px solid;
+    border-radius: 25%;
+    height: 21px;
+    width: 21px;
+    text-align: center;
+    align-content: center;
+}
+
+.newCategoryButton{
+    width: 175px;
+    height: 40px;
+}
+
+.newTaskButton{
+    width: 140px;
+    height: 50px;
+}
+.addButton > img{
+    margin-right: 15px;
+}
+
+.categoryGroup{
+   border-bottom:1px solid;
+   border-image: linear-gradient(to right, #ffffff, #7571a2, #ffffff) 40;
+
+}
+.categoryList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow: auto;
+    padding: 10px;
+    gap: 20px;
+
+}
+.categoryButtons{  
+    border-radius: 15px;
+    background-color: #F5F7F9;
+    color:#000000;
+    border-style: none;
+    
+    min-width: 100px;
+    height: 50px;
+    padding: 0px 20px 0px 20px
+}
+
+.categoryButtons:active, .addButton:active{/*will be changed*/
+    background-color: #66DAFF;
+    color:#F5F7F9;
+}
