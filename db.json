@@ -1,0 +1,28 @@
+{
+    "tasks": [
+        { 
+          "id":"1",
+          "category": "Home",
+          "title": "Task 1",
+          "desc": "Tasks related to your job or career.",
+          "importance":1,
+          "status":"inProgress"
+        },
+        {
+          "id":"2",
+          "category": "Work",
+          "title": "Task 2",
+          "desc": "Tasks related to personal errands, hobbies, or goals.",
+          "importance":2,
+          "status":"inProgress"
+        },
+        {
+          "id":"3",
+          "category": "Home",
+          "title": "Task 3",
+          "desc": "Tasks related to physical or mental health.",
+          "importance":3,
+          "status":"inProgress"
+        }
+      ]
+}

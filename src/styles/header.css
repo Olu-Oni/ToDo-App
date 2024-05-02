@@ -7,13 +7,15 @@
 }
 
 .ToDo{  
-    min-width: 160px;
-    
+    min-width: 160px;   
 }
 
 .ToDo h1{
     position: relative;
-    color: #0060C1;
+    background-image: linear-gradient(to right, #0060C1, #4faecd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     
 }
 .profile{
@@ -22,7 +24,24 @@
     flex-direction: column;
     width: 160px;
     align-items: flex-end;
+    text-align: end;
 }
+.profileImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#F5F7F9;
+    width:25px;
+    height:25px;
+    border-radius: 100%;
+   
+}
+/* .profileImg img{
+    position: relative;
+    bottom:1px;
+    width:inherit;
+    height:inherit;
+} */
 .greeting{
     display: flex;
    align-items: end;
@@ -30,4 +49,7 @@
 
 .greeting h2{
     margin-right: 10px; 
+    transform: rotate(180deg)
 }
+
+

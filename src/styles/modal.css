@@ -1,0 +1,124 @@
+:root{
+    --modal-width: max(55%,290px);
+    --modal-height: max(50%,290px);
+    --modal-font-size: 1em;
+}
+
+.modalBackground{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0%;
+    left:0%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(2px);    
+}
+
+.modal{
+    position:fixed;
+    top:calc(50dvh - var(--modal-height)/2);
+    right:calc(50dvw - var(--modal-width)/2); 
+    border-radius: 1em;
+    width:var(--modal-width);
+    height:var(--modal-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--default-content-bgc);
+    box-shadow: 0px 5px 15px 1px gray;
+    font-size: var(--modal-font-size);
+    z-index: 1;
+    padding:.5em;
+}
+
+
+.modalButtons{
+    padding:.2em .3em .2em .3em;
+    font-weight: 550;
+    color: var(--default-text-color);
+    background-color: var(--default-background-color);
+    border-radius: 2em 1em; /* tried somm new shii */
+    border:none;
+    
+}
+
+.subModal .createButton{
+    font-size:1em;
+    
+    width: fit-content;
+    padding:.2em .3em .2em .3em;
+    border-radius: 2em 1em;
+}
+.subModal .buttons{
+    align-self: flex-end;
+}
+.resetButton{
+    color: red;
+    font-size:1em;
+}
+.top{
+    display: flex;
+    width:100%;
+    padding:.5em 1.5em .5em .5em;
+}
+.top h3{
+    flex-grow: 1;
+    text-align: center;
+    color: var(--default-text-color-dark);
+    /* margin-top: .5em; */
+}
+
+
+
+.subModal{
+    width: 90%;
+    height: 90%;
+    border: .1em solid var(--default-border-color);
+    border-radius: 1em;
+    padding:.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 10px;
+    background-color: var(--default-background-color);
+}
+.desc *{
+    display: block;
+}
+.subModal input, .subModal textarea{
+    border: .05em solid var(--default-border-color);
+    border-radius: .5em;
+    width: 18ch;
+    font-size: 1em;
+    padding: .25em;
+}
+
+.subModal textarea{
+    width: clamp(22ch, 70%, 100ch);
+    height:9ch;
+    font-size: 1em;
+    margin-top: 1em;
+    resize: none;
+}
+.subModal select{
+    border-radius: .5em;
+    font-size: .75em;
+    padding: .25em;
+}
+
+
+
+@media(width<600px){
+    :root{
+        --modal-font-size: 1.15em;
+    } 
+    
+}
+@media(600px<width<800px){
+    :root{
+        --modal-font-size: 1.1em;
+    } 
+    
+}
+

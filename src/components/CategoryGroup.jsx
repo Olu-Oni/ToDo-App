@@ -10,14 +10,12 @@ const CategoryList = ({ categories }) => {
   );
 };
 
-const CategoryGroup = ({ categories }) => {
+const CategoryGroup = ({ categories, resetTasks }) => {
   return (
     <div className="categoryGroup">
       <button
         className="addButton newCategoryButton"
-        onClick={() => {
-          setNum(0);
-        }}
+        onClick={resetTasks}
       >
         <span>+</span>
         new category

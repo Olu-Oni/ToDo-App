@@ -1,76 +1,148 @@
-.topBar{
-    display:flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    
-}
-
-.topBar *{
-    flex-shrink: 0;
-    flex-grow: 0;
-}
-
-.topBar h2{
-    margin:20px 20px 0px 20px;
-    color: #8D9CB8;
-}
-
-.searchBar{
-    position:relative;
-    margin-top:20px;
-    color: #8D9CB8;
-    height: 40px; 
-    min-width: 200px;
-}
-.searchInput{
-    
-    border-radius: 15px;
-    background-color: #F5F7F9; 
-    border-style: none;
-    
-    height: 35px; 
-    width: 50px;
-    padding:0px 10px 0px 10px;
-
-}
-
-.searchInput:focus {
-    outline:none;
-    background-color: #F5F7F9;
-    width: 160px;
+:root {
+  --visibility: hidden;
 }
 
 .taskGroup {
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 1rem 1rem;
 }
-.tasks{
-    flex-basis: 1;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+/*taskbar*/
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
-.emptyToDoIcon{
-    width: clamp(100px ,70% ,600px);
-    margin-top: 30px;
-
+.topBar * {
+  flex-shrink: 0;
+  flex-grow: 0;
 }
-
-.emptyToDoIcon ~ p{
-    
-    margin: 10px 20px 0px 0px ;   
-    color: #8D9CB8;
+.topBar h2 {
+  margin: 20px 20px 0px 20px;
+  color: #8d9cb8;
 }
 
-.emptyToDoIcon + p{
-    font-size: larger;
+.searchBar {
+  position: relative;
+  display: flex;
+  top: 20px;
+  color: #8d9cb8;
+  height: 40px;
+  min-width: 200px;
+  margin-right: 60px;
+}
+.searchInput {
+  border-radius: 15px;
+  background-color: var(--default-background-color);
+  border-style: none;
+  height: 35px;
+  width: 60px;
+  padding: 0px 5px 0px 30px;
+  color: #8d9cb8;
+}
+.searchInput:focus {
+  outline: none;
+  background-color: var(--default-background-color);
+  width: 160px;
 }
 
-.searchIcon{
-    scale: .07;
+.searchBar:before {
+  /*display: var(--visibility);*/
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%238D9CB8' class='searchIcon'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z' /%3E%3C/svg%3E");
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+/*task list*/
+
+.taskContent {
+  width: 91%;
+
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.emptyToDoIcon {
+  margin-top: 5px;
+  text-align: center;
+}
+.emptyToDoIcon img {
+  width: clamp(100px, 50vw, 500px);
+}
+.emptyToDoIcon p {
+  color: #8d9cb8;
+}
+.emptyToDoIcon img + p {
+  font-size: larger;
+  margin-bottom: 0.5em;
+}
+.taskList {
+  
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+}
+.taskList > button {
+  border: none;
+}
+.statusButton {
+position: relative;
+  padding-right: 15px;
+  background-color: transparent;
+  
+}
+.dropDownIcon{
     position: absolute;
-
+    width: 15px;
+    right: -5px;   
+}
+/* .statusButton::after {
+  position: absolute;
+  content: " >";
+  color: var(--default-text-color);
+  transform: rotate(90deg);
+} */
+.task {
+  height: 48px;
+  width: 95%;
+  overflow: hidden;
+  border-radius: 1em;
+  margin: 0.5em;
+  padding: 1em;
+  display: flex;
+  gap: 35px;
+  justify-content: flex-start;
+  text-align: start;
+  background-color: var(--default-background-color);
+}
+.task:focus,
+.task:hover {
+  height: auto;
+}
+.task > div p {
+  width: min(90%, 150ch);
+  margin-top: 0.5em;
+  color: var(--default-text-color);
+}
+.task > div {
+  /* only needed because of the gap*/
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.task > span {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 0.1em solid var(--default-border-color);
+  border-radius: 0.5em;
+  background-color: var(--default-background-color);
+}
+.task > div > h4 {
+  margin-top: 0.5em;
 }

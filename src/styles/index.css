@@ -1,13 +1,100 @@
-*{
-    margin:0;
-    padding:0;
-    transition: all .05s ease-in-out;
-  }
+:root {
+  --default-border-color: hsl(219, 14%, 51%);
+  --default-background-color: #f5f7f9;
+  --default-content-bgc: hsl(196, 28%, 90%);
+  --default-text-color: #8d9cb8;
+  --default-text-color-dark: hsl(219, 31%, 35%);
+  --active-button-color: #66daff;
+  --default-addButton-color: #007fff;
+  /* --button-color-  */
+  --default-font-size: 16px;
+}
+/*  */
+
+* {
+  margin: 0;
+  padding: 0;
+  transition-property: width,height, color, transform;
+  transition-duration: 0.3s, 1s, 0.2s,.1s; 
+}
+
+body {
+  height: 100vh;
+  font-size: var(--default-font-size);
+  display: flex;
+  flex-wrap: wrap;
   
+}
+#root {
+  width: 100%;
  
-  #root{
-      width: 100%;
-      height:100%;
-      
-      overflow:hidden;
+  background-color: var(--default-content-bgc);
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+@media (width> 800px) {
+  h1 {
+    font-size: 34px;
   }
+}
+@media (width< 800px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+@media (width< 650px) {
+  h1 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .addButton,
+  .categoryButtons {
+    scale: 0.8;
+    font-size: 16px;
+    margin-left: 0px;
+  }
+  .categoryList {
+    gap: 0px;
+  }
+  .topBar {
+    width: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .categoryGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .taskGroup {
+    align-items: center;
+  }
+  .searchBar {
+    margin-right: 0px;
+    justify-content: center;
+  }
+  .task {
+    gap: 10px;
+  }
+  .task > span {
+    width: 15px;
+    height: 15px;
+    border-radius: 0.2em;
+  }
+  .emptyToDoIcon img + p {
+    font-size: 16px;
+  }
+  .searchBar::before {
+    left: 60px;
+  }
+}
